@@ -1,0 +1,32 @@
+//Дефолтные значения, как способ обработки опциональных значений
+let nickName: String? = "Jack"
+let fullName: String = "John Appleseed"
+let informalGreeting = "Hi \(nickName ?? fullName)"
+print (informalGreeting)
+
+    // Сравнение константы "vegetable" с кейсами других овощей
+let vegetable = "red pepper"
+switch vegetable {
+case "celery":
+    print("Add some raising and make ants on a log.")
+case "cucumber", "watercress":
+    print ("That would make a good tea sandwich.")
+case let x where x.hasSuffix("pepper"): //если в конст х,где х имеет суффикс "пеппер", то:
+    print("Is it a spice \(x)?")
+    default: //в остальных случаях выводится:
+        print("Everything tasted good in soup.")
+            
+}
+//Аргументы и возвращаемые ф-ии
+// Объявили константы
+let x = 1
+let y = 2
+let z = 3
+//Объявляем ф-ию с указанием аргументов и типов данных, и указываем какое значение нужно вернуть
+func findSum(a: Int, b: Int, c: Int) -> Int {
+    return a + b + c
+}
+//присваиваем константе значение в виде вызова ф-ии
+let sum = findSum (a: x, b: y, c: z)
+    //выводим на экран результат
+print (sum)
